@@ -10,7 +10,7 @@ Examples in other languages: [TypeScript](https://github.com/openvireo/openvireo
 
 You need macOS 13 or newer and Xcode 16 (Swift 6). The package takes the core's
 `OpenVireoCore.xcframework` (iOS, iOS simulator, macOS) from the
-[core release](https://github.com/openvireo/openvireo-core/releases/tag/v1.0.0) as a binary target, with
+[core release](https://github.com/openvireo/openvireo-core/releases/tag/v1.1.0) as a binary target, with
 the matching UniFFI source in `Sources/OpenVireoRustCore/`.
 
 ```sh

@@ -3,8 +3,8 @@ import PackageDescription
 
 // The core's version. scripts/update-core.sh <version> changes it, the checksum and the vendored
 // UniFFI source together.
-let coreVersion = "1.0.0"
-let coreChecksum = "20f3576588ac06614af16d9ca0d0b108f51a37bc0548def187d15b74c210be24"
+let coreVersion = "1.1.0"
+let coreChecksum = "02a897dc962e071353999dbe8d7b79291a97e9bf8c008c024b3d87caf5e05877"
 
 let package = Package(
     name: "openvireo-examples-swift",
