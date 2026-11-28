@@ -43,7 +43,7 @@ Add the package, as [`Package.swift`](Package.swift) does, or in Xcode with **Fi
 Dependencies…** and `https://github.com/openvireo/openvireo-swift`:
 
 ```swift
-.package(url: "https://github.com/openvireo/openvireo-swift", from: "1.2.0"),
+.package(url: "https://github.com/openvireo/openvireo-swift", from: "1.2.2"),
 // in the target:
 .product(name: "OpenVireoRustCore", package: "openvireo-swift"),
 ```
