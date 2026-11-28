@@ -1,3 +1,4 @@
 .build/
 .swiftpm/
 *.kdbx
+Package.resolved

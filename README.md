@@ -8,10 +8,9 @@ Examples in other languages: [TypeScript](https://github.com/openvireo/openvireo
 
 ## Run them
 
-You need macOS 13 or newer and Xcode 16 (Swift 6). The package takes the core's
-`OpenVireoCore.xcframework` (iOS, iOS simulator, macOS) from the
-[core release](https://github.com/openvireo/openvireo-core/releases/tag/v1.1.0) as a binary target, with
-the matching UniFFI source in `Sources/OpenVireoRustCore/`.
+You need macOS 13 or newer and Xcode 16 (Swift 6). The package depends on the core's
+Swift package [openvireo-swift](https://github.com/openvireo/openvireo-swift): the core's
+`OpenVireoCore.xcframework` (iOS, iOS simulator, macOS) with the UniFFI Swift API over it.
 
 ```sh
 git clone https://github.com/openvireo/openvireo-examples-swift
@@ -40,9 +39,14 @@ Keychain and the cache on disk so it can open vaults offline.
 
 ### Using the core in your own package
 
-Copy the two targets from [`Package.swift`](Package.swift) (the binary target and `OpenVireoRustCore`)
-and the files in `Sources/OpenVireoRustCore/`. `scripts/update-core.sh <version>` moves all of it to
-another core release.
+Add the package, as [`Package.swift`](Package.swift) does, or in Xcode with **File → Add Package
+Dependencies…** and `https://github.com/openvireo/openvireo-swift`:
+
+```swift
+.package(url: "https://github.com/openvireo/openvireo-swift", from: "1.2.0"),
+// in the target:
+.product(name: "OpenVireoRustCore", package: "openvireo-swift"),
+```
 
 ## The examples
 
